@@ -9,5 +9,14 @@ while counter < chances:
     if guess == number and counter == 1:
         print("WOW! You guessed the number on your first try! {number} was correct!")
         break
-    
+    elif guess == number:
+        print("You did it! {number} is the correct number! You did it in {counter} attempts!")
+        break
+    elif counter >= chances and guess != number:
+        print("Oh no! You are out of attempts! {number} was the answer! Try again!")
+        break
+    elif guess < number:
+        print("Too low! Aim higher!")
+    elif guess > number:
+        print("Too high! Aim lower!")
 
